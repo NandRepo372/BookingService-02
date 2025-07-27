@@ -1,11 +1,12 @@
 package com.example.BookingService.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @AllArgsConstructor
@@ -17,15 +18,22 @@ import java.sql.Timestamp;
 @Table(name = "orders")
 public class Order {
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "total")
-    private Long total;
+    private Long totalPrice;
 
     @Column(name = "quantity")
-    private Long quantity;
+    private Long ticketCount;
 
+    @CreationTimestamp
     @Column(name = "placed_at")
-    private Timestamp placed_at;
+    private LocalDateTime placed_at;
+
+    @Column(name = "event_id")
+    private Long eventId;
+
+    @Column(name = "customer_id")
+    private Long customerId;
 }
