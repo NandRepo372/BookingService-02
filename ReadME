@@ -1,0 +1,22 @@
+# BookingService
+
+## Project Description
+BookingService is a Spring Boot-based RESTful API designed to handle booking operations. It provides endpoints for creating bookings and managing booking-related data. The project is built using Java and follows a modular structure to ensure scalability and maintainability.
+
+## Technology Stack
+- **Programming Language**: Java
+- **Framework**: Spring Boot
+- **Build Tool**: Maven
+- **IDE**: IntelliJ IDEA 2022.2.5
+- **Dependency Injection**: Spring Framework
+- **REST API**: Spring Web
+- **JSON Parsing**: Jackson (via Spring Boot)
+- **Testing**: JUnit (optional, not included in the provided code)
+
+## Features
+- RESTful API for booking operations.oiug
+- JSON-based request and response handling.
+- Modular design with clear separation of concerns.
+
+## Project Structure
+src/main/java/com/example/BookingService/ ├── Controller/ │ └── BookingServiceController.java ├── Request/ │ └── BookingRequest.java ├── Response/ │ └── BookingResponse.java ├── Service/ │ └── BookingService.java
